@@ -16,16 +16,14 @@ public class Bowling : MonoBehaviour
     public static int score;
 
     int count = 0;
-    private void Start()
+    private void Awake()
     {
-        Time.timeScale = 1;
         pinKnockedDownCount=0;
         scoreText.text = "0";
     }
 
     private void Update()
     {
-        // Debug.Log(pinKnockedDownCount);
         if (pinKnockedDownCount != 0)
         {
             Invoke("TurnEnded", 3.0f);
